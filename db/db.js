@@ -6,6 +6,7 @@ if (!process.env.MONGODB_URI) {
   process.exit(1);
 }
 
+
 // Connect to MongoDB using the provided URI
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,

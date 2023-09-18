@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 function servePDF(req, res) {
-  const pdfFilePath = "./resume/resume.pdf"; // Provide the correct path to your PDF file
+  const pdfFilePath = "./resume/resume.pdf"; 
   // Check if the file exists
   if (fs.existsSync(pdfFilePath,img)) {
 return res;

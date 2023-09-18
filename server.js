@@ -14,13 +14,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors())
 
 app.get("/resume.pdf", (req, res) => {
-  const pdfFilePath = "./resume/resume.pdf"; // Provide the correct path to your PDF file
+  const pdfFilePath = "./resume/resume.pdf"; 
   res.download(pdfFilePath, "resume.pdf");
 
-  // Check if the file exists
+  
 });
 app.get("/img", (req, res) => {
-  const imgFilePath = "./resume/img.jpg"; // Provide the correct path to your image file
+  const imgFilePath = "./resume/img.jpg"; 
 
   // Serve the image using the "sendFile" method
   res.sendFile(imgFilePath, { root: __dirname });
