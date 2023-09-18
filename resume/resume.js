@@ -1,14 +1,13 @@
-const mongoose = require("mongoose");
+const fs = require("fs");
 
-mongoose.connect(process.env.MONGODB_URI, {
-    dbName: "resume",
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-    .then(() => {
-      console.log("Connected to MongoDB");
-    })
-    .catch((error) => {
-      console.error("Error connecting to MongoDB:", error);
-    });
-  
+function servePDF(req, res) {
+  const pdfFilePath = "./resume/resume.pdf"; // Provide the correct path to your PDF file
+  // Check if the file exists
+  if (fs.existsSync(pdfFilePath,img)) {
+return res;
+} else {
+    res.status(404).send("File not found");
+  }
+}
+
+module.exports = servePDF;
