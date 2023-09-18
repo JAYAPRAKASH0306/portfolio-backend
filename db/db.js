@@ -8,7 +8,6 @@ if (!process.env.MONGODB_URI) {
 
 // Connect to MongoDB using the provided URI
 mongoose.connect(process.env.MONGODB_URI, {
-  dbName: "portfolio",
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
